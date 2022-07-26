@@ -1,12 +1,14 @@
 password = 'a123456'
-i = 3
+t = 3
 while True: 
-	pw = input('Please Enter Your Password: ')
+	t = t - 1
+	pw = input('Please enter password: ')
 	if pw == password: 
 		print('Login Successful!')
 		break
-	else: 
-		i = i - 1
-		print('Invalid Password! You have ', i ,'more times to enter')
-		if i == 0:
+	else:
+		if t > 0:
+			print('Wrong Password!', t , 'times left')
+		else: 
+			print('STOPPPPP')
 			break
